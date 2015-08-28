@@ -1,6 +1,6 @@
 {
   "name": "renangaleno/pngoptmzr",
-  "version": "0.2",
+  "version": "0.2.1",
   "type": "library",
   "description": "A class for using pngquant.",
   "keywords": [
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-0": {
-      "pngoptmzr": "src"
+      "pngoptmzr": "src/pngoptmzr"
     }
   }
 }
