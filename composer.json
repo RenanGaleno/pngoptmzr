@@ -1,5 +1,5 @@
 {
-  "name": "RenanGaleno/pngoptmzr",
+  "name": "renangaleno/pngoptmzr",
   "type": "library",
   "description": "A class for using pngquant.",
   "minimum-stability": "dev",
