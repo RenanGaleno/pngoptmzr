@@ -15,7 +15,6 @@
       "homepage": "http://renan.eng.br/"
     }
   ],
-  "minimum-stability": "stable",
   "require": {
     "php": ">=5.3.0"
   },
