@@ -34,10 +34,6 @@ class pngoptmzr
 	{
 		// Shell exec pngquant getting return as string
 		$compressed_png_content = shell_exec("pngquant --quality=$min_quality-$max_quality - < ".escapeshellarg($imagepath));
-		// Check if we have success, or trow exception
-	    if (!$compressed_png_content) {
-	        throw new Exception("Conversion to compressed PNG failed. Is pngquant 1.8+ installed on the server?");
-	    }
 	    // Return the string containing minified png
 	    return $compressed_png_content;
 	}
@@ -51,10 +47,6 @@ class pngoptmzr
 	{
 		// Shell exec pngquant getting return as string
 		$compressed_png_content = shell_exec("pngquant --quality=$min_quality-$max_quality - ".escapeshellarg($image));
-		// Check if we have success, or trow exception
-	    if (!$compressed_png_content) {
-	        throw new Exception("Conversion to compressed PNG failed. Is pngquant 1.8+ installed on the server?");
-	    }
 	    // Return the string containing minified png
 	    return $compressed_png_content;
 	}
