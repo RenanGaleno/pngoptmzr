@@ -1,6 +1,6 @@
 {
   "name": "renangaleno/pngoptmzr",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "type": "library",
   "description": "A class for using pngquant.",
   "keywords": [

@@ -17,7 +17,7 @@ class pngoptmzr
 	/* Check if png quant is installed
 	 * @return boolean - true if pngquant is installed, false if it isn't
 	*/
-	public function isOk()
+	public static function isOk()
 	{
 		// Check if pngquant is installed
 		$sh = shell_exec("which pngquant");
@@ -30,23 +30,10 @@ class pngoptmzr
 	 * @param $min_quality int - guarantee that quality won't be worse than that
 	 * @return string - content of PNG file after conversion
 	*/
-	public function fromFile($imagepath, $max_quality = 90, $min_quality = 60)
+	public static function fromFile($imagepath, $max_quality = 90, $min_quality = 60)
 	{
 		// Shell exec pngquant getting return as string
 		$compressed_png_content = shell_exec("pngquant --quality=$min_quality-$max_quality - < ".escapeshellarg($imagepath));
-	    // Return the string containing minified png
-	    return $compressed_png_content;
-	}
-	/* Optimizes PNG file with pngquant from a string
-	 * @param $image string - image itself as string
-	 * @param $max_quality int - conversion quality, useful values from 60 to 100 (smaller number = smaller file)
-	 * @param $min_quality int - guarantee that quality won't be worse than that
-	 * @return string - content of PNG file after conversion
-	*/
-	public function fromString($image, $max_quality = 90, $min_quality = 60)
-	{
-		// Shell exec pngquant getting return as string
-		$compressed_png_content = shell_exec("pngquant --quality=$min_quality-$max_quality - ".escapeshellarg($image));
 	    // Return the string containing minified png
 	    return $compressed_png_content;
 	}
