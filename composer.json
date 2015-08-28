@@ -2,7 +2,7 @@
   "name": "renangaleno/pngoptmzr",
   "type": "library",
   "description": "A class for using pngquant.",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "keywords": [
     "png",
     "optimizer"
